@@ -1,0 +1,46 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <small class="text-muted">Logged out</small>
+        <h1 class="pt-3">See you soon</h1>
+        <div class="border-top pt-3">
+            <small class="text-muted"><a href="{% url 'login' %}">Sign in again</a></small>
+        </div>
+    </div>
+
+    <div class="container pt-5">
+        <div class="row">
+          <div class="col-sm">
+            <div class="card" style="width: 18rem; color: gray;">
+                <img src="{% static 'dashboard/img/image1.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Science</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">See more</a>
+                </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'dashboard/img/image2.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Technology</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">See more</a>
+                </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'dashboard/img/image3.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Commerse</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">See more</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock content %}

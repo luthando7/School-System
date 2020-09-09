@@ -1,0 +1,85 @@
+{% extends "dashboard/base.html" %}
+{% block content %}
+{% load static %}
+    <div class="jumbotron">
+      <div class="container">
+          <h1 class="display-4">The student hub</h1>
+          <p class="lead">Find all the lecture slides and videos to all your subjects with a simple click.</p>
+          <hr class="my-4">
+          <p>This site is for leaners and students, teachers can post lessons for their students to find, click learn more.</p>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </div>
+    </div>
+    <div class="container">
+      {% if user.is_authenticated %}
+      
+      {% else %}
+        <div class="row">
+          <div class="col-sm">
+            <form method="POST">
+                <div class="container">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </form>
+          </div>
+
+          <div class="col-sm">
+            <div class="jumbotron jumbotron-fluid"  style="background-color: #94dbfb;">
+                <div class="container">
+                  <h1 class="display-4">Kairos</h1>
+                  <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quo, vitae voluptates ipsum animi accusantium accusamus fugit recusandae debitis?</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+    <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="card" style="width: 18rem; color: gray;">
+                <img src="{% static 'dashboard/img/image1.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Science</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">See more</a>
+                </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'dashboard/img/image2.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Technology</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">See more</a>
+                </div>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'dashboard/img/image3.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Commerse</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">See more</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="container">
+        
+    </div>
+{% endblock content %}
